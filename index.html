@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img src="./src/assets/logo.svg" alt="Logo" />
+    </header>
+
+    <section class="tipCalc">
+      <div class="tipCalc__info">
+        <div class="form-control">
+          <p class="tipCalc__label">Bill</p>
+          <input
+            class="tipCalc__input tipCalc__input--bg tipCalc__input--bg-dollar"
+            type="number"
+            placeholder="0"
+          />
+        </div>
+
+        <div>
+          <p class="tipCalc__label">Select Tip %</p>
+          <div class="tipCalc__tip-grid">
+            <button class="active">5%</button>
+            <button class="null">10%</button>
+            <button class="null">15%</button>
+            <button class="null">25%</button>
+            <button class="null">50%</button>
+
+            <input class="tipCalc__input" type="text" placeholder="Custom" />
+          </div>
+        </div>
+
+        <div class="form-control">
+          <p class="tipCalc__label">Number of People</p>
+          <input
+            class="tipCalc__input tipCalc__input tipCalc__input--bg tipCalc__input--bg-person"
+            type="number"
+            placeholder="1"
+          />
+        </div>
+      </div>
+
+      <!-- Resultados -->
+      <div class="result">
+        <div class="result__item">
+          <div class="result__item__info">
+            <p>Tip Amount</p>
+            <p>/ person</p>
+          </div>
+          <p class="result__item__amount">${tipAmount}</p>
+        </div>
+        <div class="result__item">
+          <div class="result__item__info">
+            <p>Total</p>
+            <p>/ person</p>
+          </div>
+          <p class="result__item__amount">${total}</p>
+        </div>
+        <button class="result__reset-btn">Reset</button>
+      </div>
+    </section>
+  </body>
+</html>
