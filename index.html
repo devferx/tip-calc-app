@@ -22,6 +22,7 @@
         <div class="form-control">
           <p class="tipCalc__label">Bill</p>
           <input
+            id="costoInput"
             class="tipCalc__input tipCalc__input--bg tipCalc__input--bg-dollar"
             type="number"
             placeholder="0"
@@ -37,16 +38,23 @@
             <button class="null">25%</button>
             <button class="null">50%</button>
 
-            <input class="tipCalc__input" type="text" placeholder="Custom" />
+            <input
+              id="customTipInput"
+              class="tipCalc__input"
+              type="text"
+              placeholder="Custom"
+            />
           </div>
         </div>
 
         <div class="form-control">
           <p class="tipCalc__label">Number of People</p>
           <input
+            id="cantPersonasInput"
             class="tipCalc__input tipCalc__input tipCalc__input--bg tipCalc__input--bg-person"
             type="number"
             placeholder="1"
+            value="1"
           />
         </div>
       </div>
@@ -58,17 +66,19 @@
             <p>Tip Amount</p>
             <p>/ person</p>
           </div>
-          <p class="result__item__amount">${tipAmount}</p>
+          <p id="tipLabel" class="result__item__amount">${tipAmount}</p>
         </div>
         <div class="result__item">
           <div class="result__item__info">
             <p>Total</p>
             <p>/ person</p>
           </div>
-          <p class="result__item__amount">${total}</p>
+          <p id="totalPersonaLabel" class="result__item__amount">$ total</p>
         </div>
-        <button class="result__reset-btn">Reset</button>
+        <button id="reset-button" class="result__reset-btn">Reset</button>
       </div>
     </section>
+
+    <script src="./src/js/app.js"></script>
   </body>
 </html>
